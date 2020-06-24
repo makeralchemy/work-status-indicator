@@ -12,7 +12,6 @@ int RED_LED    = D0;
 int YELLOW_LED = D1;
 int GREEN_LED  = D2;
 
-
 int HEARTBEAT_LED = D7;
 
 int ONE_SECOND = 1000;
