@@ -18,10 +18,10 @@ These instructions will show how to setup and use the workstatusindicator. Under
 - Hookup wire
 
 ### Assembly Instructions
-To be added
+Details to be added
 
 ### Installing the Software
-To be added
+Details to be added
 
 ## Using the work status indicator
 The status can be changed one of three ways:
@@ -34,6 +34,11 @@ The status can be changed one of three ways:
 ### Python
 
 ### Particle App
+Details to be added
+
+![Particle App Functions](https://raw.githubusercontent.com/makeralchemy/work-status-indicator/master/particle-app-functions.png)
+![Particle App Variables](https://raw.githubusercontent.com/makeralchemy/work-status-indicator/master/particle-app-variables.png)
+
 
 ## License
 
