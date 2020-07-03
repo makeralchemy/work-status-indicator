@@ -30,13 +30,13 @@ The status can be changed one of three ways:
 - Via the Particle app
 
 ### CURL
-The CURL folder contains bash shell scripts that use the CURL command to change the color illuminated by the tower lamp. 
-The raw CURL output is displayed after the command completes.
+The *curl* folder contains bash shell scripts that use the CURL command to change the color illuminated by the tower lamp. 
+The JSON output returned from the Particle cloud after executing the request is displayed after the command completes.
 The shell scripts must be edited before running them:
 - *bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb* must be replaced by your Particle authorization token which can be found in Particle IDE.
 - *dddddddddddddddddddddddd* must be replaced by the device id for the Photon running the workstatusindicator firmware. The device ID can also be found in the Particle IDE.
 
-The shell scripts provide are:
+The shell scripts provided are:
 - *get-last-status.sh* displays the penultimate status
 - *get-version.sh* displays the version of the workstatusindicator firmware
 - *get-work-status.sh* displays current status being displayed by the lamp  
@@ -45,7 +45,45 @@ The shell scripts provide are:
 - *set-status-in-meetings.sh* will turn the lamp color to red 
 - *set-status-off.sh* will turn off the lamp 
 
+Executing the set-status-in-meetings script and it's output would look like:
+```
+$ ./set-status-in-meetings.sh
+{"id":"dddddddddddddddddddddddd","connected":true,"return_value":0}
+```
+Executing the get-work-status script and it's output would look like:
+```
+$ ./get-work-status.sh
+{"cmd":"VarReturn","name":"work_status","result":"In Meetings","coreInfo":{"last_heard":"2020-07-03T04:40:58.413Z","connected":true,"last_handshake_at":"2020-06-28T18:56:57.474Z","deviceID":"dddddddddddddddddddddddd","product_id":6}}
+```
+
 ### Python
+The *python* folder contains Python programs that can used to change the color illuminated by the tower lamp. 
+The HTTP request return code and the JSON output returned from the Particle cloud after executing the request is displayed after the command completes.
+The Python programs must be edited before running them:
+- *bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb* must be replaced by your Particle authorization token which can be found in Particle IDE.
+- *dddddddddddddddddddddddd* must be replaced by the device id for the Photon running the workstatusindicator firmware. The device ID can also be found in the Particle IDE.
+
+The Python programs provided are:
+- *get-last-status.py* displays the penultimate status
+- *get-version.py* displays the version of the workstatusindicator firmware
+- *get-work-status.py* displays current status being displayed by the lamp  
+- *set-status-available.py* will turn the lamp color to green  
+- *set-status-working.py* will turn the lamp color to yellow  
+- *set-status-in-meetings.py* will turn the lamp color to red 
+- *set-status-off.py* will turn off the lamp 
+
+Executing the set-status-working Python program and it's output would look like:
+```
+$ python set-status-working.py
+200
+{"id":"dddddddddddddddddddddddd","connected":true,"return_value":0}
+```
+Executing the get-work-status Python Program and it's output would look like:
+```
+$ python get-work-status.py
+200
+{"cmd":"VarReturn","name":"work_status","result":"Working","coreInfo":{"last_heard":"2020-07-03T04:46:02.576Z","connected":true,"last_handshake_at":"2020-06-28T18:56:57.474Z","deviceID":"dddddddddddddddddddddddd","product_id":6}}
+```
 
 ### Particle App
 The work status can be changed in the Particle app by selecting the Photon running the workstatusindicator code and going to the functions tab.
