@@ -37,7 +37,9 @@ The status can be changed one of three ways:
 Details to be added
 
 ![Particle App Functions](https://raw.githubusercontent.com/makeralchemy/work-status-indicator/master/particle-app-functions.png)
+<img src="https://raw.githubusercontent.com/makeralchemy/work-status-indicator/master/particle-app-functions.png" alt="Particle App Functions" width="180"/>
 ![Particle App Variables](https://raw.githubusercontent.com/makeralchemy/work-status-indicator/master/particle-app-variables.png)
+<img src="https://raw.githubusercontent.com/makeralchemy/work-status-indicator/master/particle-app-variables.png" alt="Particle App Variables" width="180"/>
 
 
 ## License
