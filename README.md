@@ -3,6 +3,7 @@ workstatusindicator is a Particle Photon-based IoT device for displaying work st
 
 ## How it works
 workstatusindicator uses a simple C program to monitor the state of the worker via Particle cloud functions and variables. When a function to change the color of tower lamp is called, workstatusindicator turns off the lamp LEDs for current color and turns on the lamp LEDs for the new status. 
+The overall wiring for the workstatusindicator hardware is shown in the [Photon-Work-Status-Light-Schematic.pdf](https://github.com/makeralchemy/work-status-indicator/blob/master/Photon-Work-Status-Light-Schematic.pdf)
 
 ## Getting Started
 These instructions will show how to setup and use the workstatusindicator. Understanding how to use the Particle web IDE is assumed. Instructions for using the Particle Web IDE can be found [here](https://docs.particle.io/tutorials/developer-tools/build/).
@@ -19,6 +20,7 @@ These instructions will show how to setup and use the workstatusindicator. Under
 
 ### Assembly Instructions
 Details to be added
+The wiring diagram for the circuit board is shown in the [Photon-Work-Status-Light-Circuit-Board-Layout.pdf](https://github.com/makeralchemy/work-status-indicator/blob/master/Photon-Work-Status-Light-Circuit-Board-Layout.pdf)
 
 ### Installing the Software
 Details to be added
