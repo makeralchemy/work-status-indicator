@@ -14,7 +14,7 @@ These instructions will show how to setup and use the workstatusindicator. Under
 - 1 LTV-847 Optocoupler. 
 - 1 16-pin IC socket (optional depending on how comfortable you are directly soldering ICs)
 - 3 Resistors (180 Ohm)
-- 1 [Adafruit](https://www.adafruit.com/) Perma-Proto Half-sized Breadboard PCB (Product ID: (1609)[https://www.adafruit.com/product/1609])
+- 1 [Adafruit](https://www.adafruit.com/) Perma-Proto Half-sized Breadboard PCB (Product ID: [1609](https://www.adafruit.com/product/1609))
 - 1 USB Power Supply with micro USB cable
 - 1 12VDC 1Amp Power Supply
 - Hookup wire (green, yellow, red, and black)
