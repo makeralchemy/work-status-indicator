@@ -34,13 +34,24 @@ The status can be changed one of three ways:
 ### Python
 
 ### Particle App
-Details to be added
+The work status can be changed in the Particle app by selecting the Photon running the workstatusindicator code and going to the functions tab.
+Clicking on the one of the functions will change which color is illuminating on the tower lamp:
+- *in_meetings* will turn the lamp color to red
+- *working* will turn the lamp color to yellow
+- *available* will turn the lamp color to green
+- *off* will not display any colors
 
 <table>
 <tr><td>
 <img src="https://raw.githubusercontent.com/makeralchemy/work-status-indicator/master/particle-app-functions.png" alt="Particle App Functions" width="400"/>
 </td></tr>
 </table>
+
+The work status can be seen in the Particle app by selecting the Photon running the workstatusindicator code and going to the variables tab.
+The current values of the variables are displayed:
+- *work_status* is the current status being displayed by the lamp
+- *last_status* is whatever the status was before the current the status
+- *version* is the version of the workstatusindicator firmware
 
 <table>
 <tr><td>
