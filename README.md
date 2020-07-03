@@ -12,10 +12,10 @@ These instructions will show how to setup and use the workstatusindicator. Under
 - 2 Pin headers
 - 1 LTV-847 Optocoupler
 - 3 Resistors (180 Ohm)
-- 1 # Adafruit Perma-Proto Half-sized Breadboard PCB - Product ID:  1609
-- USB Power Supply with micro USB cable
-- 12VDC 1Amp Power Supply
-- Hookup wire
+- 1 Adafruit Perma-Proto Half-sized Breadboard PCB (Product ID: 1609)
+- 1 USB Power Supply with micro USB cable
+- 1 12VDC 1Amp Power Supply
+- Hookup wire (green, yellow, red, and black)
 
 ### Assembly Instructions
 Details to be added
@@ -30,16 +30,30 @@ The status can be changed one of three ways:
 - Via the Particle app
 
 ### CURL
+The CURL folder contains bash shell scripts that use the CURL command to change the color illuminated by the tower lamp. 
+The raw CURL output is displayed after the command completes.
+The shell scripts must be edited before running them:
+- *bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb* must be replaced by your Particle authorization token which can be found in Particle IDE.
+- *dddddddddddddddddddddddd* must be replaced by the device id for the Photon running the workstatusindicator firmware. The device ID can also be found in the Particle IDE.
+
+The shell scripts provide are:
+- *get-last-status.sh* displays the penultimate status
+- *get-version.sh* displays the version of the workstatusindicator firmware
+- *get-work-status.sh* displays current status being displayed by the lamp  
+- *set-status-available.sh* will turn the lamp color to green  
+- *set-status-working.sh* will turn the lamp color to yellow  
+- *set-status-in-meetings.sh* will turn the lamp color to red 
+- *set-status-off.sh* will turn off the lamp 
 
 ### Python
 
 ### Particle App
 The work status can be changed in the Particle app by selecting the Photon running the workstatusindicator code and going to the functions tab.
-Clicking on the one of the functions will change which color is illuminating on the tower lamp:
-- *in_meetings* will turn the lamp color to red
-- *working* will turn the lamp color to yellow
+Selecting on the one of the functions will change which color is illuminating on the tower lamp:
 - *available* will turn the lamp color to green
-- *off* will not display any colors
+- *working* will turn the lamp color to yellow
+- *in_meetings* will turn the lamp color to red
+- *off* will turn off the lamp
 
 <table>
 <tr><td>
@@ -49,9 +63,9 @@ Clicking on the one of the functions will change which color is illuminating on 
 
 The work status can be seen in the Particle app by selecting the Photon running the workstatusindicator code and going to the variables tab.
 The current values of the variables are displayed:
-- *work_status* is the current status being displayed by the lamp
-- *last_status* is whatever the status was before the current the status
+- *last_status* is the penultimate status
 - *version* is the version of the workstatusindicator firmware
+- *work_status* is the current status being displayed by the lamp
 
 <table>
 <tr><td>
